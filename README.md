@@ -7,6 +7,13 @@ There are three components to this approach:
 2. A groovy file to make calling the python script easier
 3. The Jenkinsfile which will make use of the groovy file
 
+You will need to add the following approvedSignatures to scriptApproval.xml (either manually or by building and allowing each one through `Manage Jenkins > In-process Script Approval`:
+```
+method hudson.model.Run getResult
+method org.jenkinsci.plugins.workflow.support.steps.build.RunWrapper getRawBuild
+staticField hudson.model.Result SUCCESS
+```
+
 ## .jenkins/gitbuildinfo.py
 This is the simple python script that does all the manipulation of the git log. It provides a --help using argparse.
 I used python here purely because I am more comfortable with it. This assumes that `git` is in your PATH.
