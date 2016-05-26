@@ -2,6 +2,7 @@
 Example of using a python and groovy script to send emails when a jenkins pipeline job fails
 
 There are three components to this approach:
+
 1. A python script to perform the git requests
 2. A groovy file to make calling the python script easier
 3. The Jenkinsfile which will make use of the groovy file
