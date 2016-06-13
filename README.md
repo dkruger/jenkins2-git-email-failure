@@ -1,4 +1,7 @@
 # jenkins2-git-email-failure
+
+__UPDATE__: The emailext plugin added a feature to email culprits with the 2.44 release: https://issues.jenkins-ci.org/browse/JENKINS-35365
+
 Example of using a python and groovy script to send emails when a jenkins pipeline job fails
 
 There are three components to this approach:
